@@ -3,7 +3,9 @@ import HomePage from './pages/HomePage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
-import ModelPage from './pages/DetectionPage.jsx';
+import ModelPage from './pages/ModelPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+
 
 function App() {
   return (
@@ -12,8 +14,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/detection" element={<ModelPage />} /> 
+        <Route path="/model" element={<ModelPage />} /> 
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
