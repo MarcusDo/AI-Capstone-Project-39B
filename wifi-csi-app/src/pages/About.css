@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.nav {
+  width: 100%;
+  height: 95px;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-sizing: border-box;
+  overflow: hidden;  
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;   
+}
+
+.nav-logo-img {
+  height: 135px;      
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transform: translateY(0px);
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav a:hover {
+  color: #2a74c9;
+}
+
+.about-container {
+  width: 100%;
+  min-height: calc(100vh - 115px);
+  padding: 70px 10%;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #f5fbff 0%, #ffffff 100%);
+}
+
+.about-container h1 {
+  text-align: center;
+  font-size: 56px;
+  color: #1a3a5c;
+  margin: 0 0 55px;
+  font-weight: 800;
+}
+
+.about-section {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+  padding: 38px 45px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-left: 8px solid #218fdc;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  color: #218fdc;
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #3d4654;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    height: auto;
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-logo-img {
+    height: 85px;
+  }
+
+  .nav ul {
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
+
+  .about-container {
+    padding: 45px 6%;
+  }
+
+  .about-container h1 {
+    font-size: 40px;
+  }
+
+  .about-section {
+    padding: 28px;
+  }
+
+  .about-section h2 {
+    font-size: 26px;
+  }
+
+  .about-section p {
+    font-size: 17px;
+  }
+}
