@@ -1,0 +1,186 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.nav {
+  width: 100%;
+  height: 95px;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-sizing: border-box;
+  overflow: hidden;   
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.nav-logo-img {
+  height: 135px;      
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transform: translateY(0px);
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav a:hover {
+  color: #2a74c9;
+}
+
+
+.contact-page {
+  width: 100%;
+  min-height: calc(100vh - 95px);
+  padding: 70px 8%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 950px;
+  background: white;
+  padding: 55px 65px;
+  border-radius: 28px;
+  box-shadow: 0 14px 35px rgba(31, 143, 223, 0.12);
+  border-top: 8px solid #1f8fdf;
+  box-sizing: border-box;
+}
+
+.intro {
+  font-size: 30px;
+  color: #1f8fdf;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.description {
+  font-size: 19px;
+  color: #4b5f73;
+  text-align: center;
+  line-height: 1.7;
+  margin: 0 auto 42px;
+  max-width: 760px;
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.team-member {
+  padding: 22px 28px;
+  border-radius: 18px;
+  background: #eaf5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  box-sizing: border-box;
+  border: 1px solid #d2e9ff;
+}
+
+.team-member strong {
+  font-size: 20px;
+  color: #102a43;
+}
+
+.team-member span {
+  font-size: 18px;
+  color: #1f6fbf;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav {
+    height: auto;
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-logo-img {
+    height: 110px;
+  }
+
+  .nav ul {
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
+
+  .contact-page {
+    padding: 45px 6%;
+  }
+
+  .contact-card {
+    padding: 38px 28px;
+  }
+
+  .contact-card h1 {
+    font-size: 40px;
+  }
+
+  .intro {
+    font-size: 19px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .team-member {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .team-member strong {
+    font-size: 19px;
+  }
+
+  .team-member span {
+    font-size: 16px;
+  }
+}

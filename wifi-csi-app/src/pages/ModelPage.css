@@ -1,0 +1,362 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f8ff;
+  overflow-x: hidden;
+}
+
+.nav {
+  width: 100%;
+  height: 95px;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 3px 14px rgba(31, 143, 223, 0.12);
+  border-bottom: 1px solid #dceeff;
+}
+
+.logo {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.nav-logo-img {
+  height: 135px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transform: translateY(0px);
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active-link {
+  color: #1f8fdf;
+  font-weight: 700;
+  border-bottom: 3px solid #1f8fdf;
+  padding-bottom: 8px;
+}
+
+.monitor-page {
+  width: 100%;
+  min-height: calc(100vh - 95px);
+  padding: 48px 7%;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+}
+
+.monitor-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.monitor-header h1 {
+  font-size: 34px;
+  color: #1f8fdf;
+  margin: 0 0 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.monitor-header p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4b5f73;
+}
+
+.visualisation-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  width: 100%;
+}
+
+.visual-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 14px 35px rgba(31, 143, 223, 0.14);
+  border: 1px solid #cfe8ff;
+}
+
+.visual-card h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #1f6fbf;
+  margin: 0 0 24px;
+  font-weight: 700;
+}
+
+.placeholder-box {
+  height: 430px;
+  border-radius: 22px;
+  background: #eaf5ff;
+  border: 2px dashed #8fcaf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #335c7d;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-box.active {
+  background: linear-gradient(135deg, #eaf5ff, #dff1ff);
+  border: 2px solid #1f8fdf;
+}
+
+.csi-animation {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signal-line {
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: #1f8fdf;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.signal-line::before,
+.signal-line::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 20px;
+  height: 20px;
+  background: #1f8fdf;
+  border-radius: 50%;
+}
+
+.signal-line::before {
+  left: 20%;
+}
+
+.signal-line::after {
+  right: 20%;
+}
+
+.signal-bars {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.signal-bars span {
+  width: 22px;
+  background: #1f8fdf;
+  border-radius: 8px 8px 0 0;
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.signal-bars span:nth-child(1) { height: 45px; animation-delay: 0s; }
+.signal-bars span:nth-child(2) { height: 80px; animation-delay: 0.1s; }
+.signal-bars span:nth-child(3) { height: 120px; animation-delay: 0.2s; }
+.signal-bars span:nth-child(4) { height: 65px; animation-delay: 0.3s; }
+.signal-bars span:nth-child(5) { height: 140px; animation-delay: 0.4s; }
+.signal-bars span:nth-child(6) { height: 95px; animation-delay: 0.5s; }
+.signal-bars span:nth-child(7) { height: 70px; animation-delay: 0.6s; }
+.signal-bars span:nth-child(8) { height: 115px; animation-delay: 0.7s; }
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.65);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.pose-placeholder {
+  position: relative;
+  width: 260px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.pose-placeholder .head {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1f8fdf;
+  position: absolute;
+  top: 15px;
+  left: 106px;
+}
+
+.pose-placeholder .body,
+.pose-placeholder .arm,
+.pose-placeholder .leg {
+  position: absolute;
+  background: #1f8fdf;
+  border-radius: 999px;
+  transform-origin: top center;
+}
+
+.pose-placeholder .body {
+  width: 12px;
+  height: 105px;
+  top: 65px;
+  left: 124px;
+}
+
+.left-arm {
+  width: 10px;
+  height: 95px;
+  top: 82px;
+  left: 118px;
+  transform: rotate(45deg);
+}
+
+.right-arm {
+  width: 10px;
+  height: 95px;
+  top: 82px;
+  left: 132px;
+  transform: rotate(-45deg);
+}
+
+.left-leg {
+  width: 11px;
+  height: 110px;
+  top: 165px;
+  left: 121px;
+  transform: rotate(25deg);
+}
+
+.right-leg {
+  width: 11px;
+  height: 110px;
+  top: 165px;
+  left: 130px;
+  transform: rotate(-25deg);
+}
+
+.pose-placeholder p {
+  position: absolute;
+  width: 360px;
+  left: 50%;
+  bottom: -65px;
+  transform: translateX(-50%);
+  color: #335c7d;
+  font-size: 18px;
+}
+
+.monitor-control {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.status-text {
+  font-size: 21px;
+  color: #4b5f73;
+  margin-bottom: 22px;
+}
+
+.status-text strong {
+  color: #1f8fdf;
+}
+
+.start-button {
+  padding: 17px 48px;
+  border: none;
+  border-radius: 999px;
+  background: #1f8fdf;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(31, 143, 223, 0.28);
+  transition: 0.2s ease;
+}
+
+.start-button:hover {
+  background: #1678bd;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    height: auto;
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-logo-img {
+    height: 110px;
+  }
+
+  .nav ul {
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 20px;
+  }
+
+  .monitor-page {
+    padding: 42px 6%;
+  }
+
+  .monitor-header h1 {
+    font-size: 30px;
+  }
+
+  .monitor-header p {
+    font-size: 16px;
+  }
+
+  .visualisation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholder-box {
+    height: 360px;
+  }
+}
